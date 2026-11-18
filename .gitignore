@@ -1,0 +1,4 @@
+_site
+.vercel
+.netlify
+.DS_Store

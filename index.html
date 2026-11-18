@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shreya Dawadi - Portfolio</title>
+    <meta name="description" content="Portfolio of Shreya Dawadi, a Computer Engineering student in Pokhara, Nepal who builds and deploys full-stack web applications with React, Node.js and PostgreSQL, with networking experience from Nepal Telecom." />
+    <meta name="author" content="Shreya Dawadi" />
+    <link rel="canonical" href="https://www.shreyadawadi.com.np/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Shreya Dawadi" />
+    <meta property="og:title" content="Shreya Dawadi - Portfolio" />
+    <meta property="og:description" content="Portfolio of Shreya Dawadi, a Computer Engineering student in Pokhara, Nepal who builds and deploys full-stack web applications with React, Node.js and PostgreSQL, with networking experience from Nepal Telecom." />
+    <meta property="og:url" content="https://www.shreyadawadi.com.np/" />
+    <meta property="og:image" content="https://www.shreyadawadi.com.np/og.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Shreya Dawadi - Portfolio" />
+    <meta name="twitter:description" content="Portfolio of Shreya Dawadi, a Computer Engineering student in Pokhara, Nepal who builds and deploys full-stack web applications with React, Node.js and PostgreSQL, with networking experience from Nepal Telecom." />
+    <meta name="twitter:image" content="https://www.shreyadawadi.com.np/og.png" />
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="theme-color" content="#F3EFE7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#11130F" media="(prefers-color-scheme: dark)" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Instrument+Sans:wght@400..700&family=IBM+Plex+Mono:wght@400;500&display=swap" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Shreya Dawadi",
+        "jobTitle": "Full-Stack Developer",
+        "url": "https://www.shreyadawadi.com.np",
+        "email": "mailto:dawadishreya1@gmail.com",
+        "address": { "@type": "PostalAddress", "addressLocality": "Pokhara", "addressCountry": "NP" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Pokhara University" },
+        "sameAs": ["https://github.com/ShreyaDawadi", "https://www.linkedin.com/in/shreya-dawadi-a80b48270/"]
+      }
+    </script>
+    <script>
+      // Apply the saved (or system) theme before first paint to avoid a flash,
+      // and mark that JavaScript is running so scroll animations can hide content until revealed.
+      document.documentElement.classList.add('js')
+      try {
+        var t = localStorage.getItem('theme')
+        if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        document.documentElement.dataset.theme = t
+      } catch (e) {}
+    </script>
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- Icon set (Lucide icons, ISC licence) used throughout via <use href="#i-…"> -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true">
+      <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10" /><path d="M7 17 17 7" /></symbol>
+      <symbol id="i-arrow-down-right" viewBox="0 0 24 24"><path d="m7 7 10 10" /><path d="M17 7v10H7" /></symbol>
+      <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7" /><path d="M12 19V5" /></symbol>
+      <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 15V3" /><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><path d="m7 10 5 5 5-5" /></symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16" /><path d="M4 12h16" /><path d="M4 18h16" /></symbol>
+      <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18" /><path d="m6 6 12 12" /></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4" /><path d="M12 2v2" /><path d="M12 20v2" /><path d="m4.93 4.93 1.41 1.41" /><path d="m17.66 17.66 1.41 1.41" /><path d="M2 12h2" /><path d="M20 12h2" /><path d="m6.34 17.66-1.41 1.41" /><path d="m19.07 4.93-1.41 1.41" /></symbol>
+      <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" /></symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14" /><path d="M12 5v14" /></symbol>
+      <symbol id="i-send" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z" /><path d="m21.854 2.147-10.94 10.939" /></symbol>
+      <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2" /><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2" /></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></symbol>
+      <symbol id="i-github" viewBox="0 0 24 24"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.76 2.7 1.25 3.36.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" /></symbol>
+      <symbol id="i-linkedin" viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z" /></symbol>
+    </svg>
+
+    <a href="#main" class="skip label">Skip to content</a>
+
+    <!-- ── Navigation ─────────────────────────────────────────────────── -->
+    <header class="site-header" id="site-header">
+      <div class="progress" id="progress" aria-hidden="true"></div>
+      <div class="wrap header-inner">
+        <a href="#top" class="brand" aria-label="Shreya Dawadi, back to top">Shreya <em>Dawadi</em></a>
+
+        <div class="header-actions">
+          <nav aria-label="Primary" class="nav-desktop">
+            <ul>
+              <li><a href="#about" class="label link-line">About</a></li>
+              <li><a href="#skills" class="label link-line">Skills</a></li>
+              <li><a href="#work" class="label link-line">Work</a></li>
+              <li><a href="#education" class="label link-line">Education</a></li>
+              <li><a href="#experience" class="label link-line">Experience</a></li>
+              <li><a href="#contact" class="label link-line">Contact</a></li>
+            </ul>
+          </nav>
+
+          <button type="button" class="icon-btn theme-toggle" id="theme-toggle" aria-label="Switch theme" title="Switch theme">
+            <svg class="i i-17 show-light"><use href="#i-moon" /></svg>
+            <svg class="i i-17 show-dark"><use href="#i-sun" /></svg>
+          </button>
+
+          <button type="button" class="icon-btn menu-toggle" id="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+            <svg class="i i-20 when-closed"><use href="#i-menu" /></svg>
+            <svg class="i i-20 when-open"><use href="#i-x" /></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div id="mobile-menu" class="mobile-menu" hidden>
+      <nav aria-label="Mobile" class="wrap mobile-nav">
+        <ul>
+          <li style="--i: 0"><a href="#about"><span class="label">01</span><span class="display">About</span></a></li>
+          <li style="--i: 1"><a href="#skills"><span class="label">02</span><span class="display">Skills</span></a></li>
+          <li style="--i: 2"><a href="#work"><span class="label">03</span><span class="display">Work</span></a></li>
+          <li style="--i: 3"><a href="#education"><span class="label">04</span><span class="display">Education</span></a></li>
+          <li style="--i: 4"><a href="#experience"><span class="label">05</span><span class="display">Experience</span></a></li>
+          <li style="--i: 5"><a href="#contact"><span class="label">06</span><span class="display">Contact</span></a></li>
+        </ul>
+      </nav>
+      <p class="label wrap mobile-email">dawadishreya1@gmail.com</p>
+    </div>
+
+    <main id="main">
+      <!-- ── Hero ─────────────────────────────────────────────────────── -->
+      <section id="top" aria-label="Introduction" class="hero">
+        <div class="wrap">
+          <div class="hero-grid">
+            <div class="hero-text">
+              <h1 class="display hero-name">
+                <span class="name-line"><span style="--d: 0.1s">Shreya</span></span>
+                <span class="name-line name-last"><span style="--d: 0.2s">Dawadi</span></span>
+              </h1>
+
+              <p class="label hero-role fade-up" style="--d: 0.5s">
+                Full-Stack Developer<span class="slash">/</span>Networking
+              </p>
+
+              <p class="hero-intro fade-up" style="--d: 0.6s">
+                Computer Engineering student at Pokhara University. I build and deploy full-stack web applications with React, Node.js and PostgreSQL, and I have designed enterprise networks as an intern at Nepal Telecom.
+              </p>
+
+              <div class="hero-actions fade-up" style="--d: 0.7s">
+                <a href="#work" class="btn btn-solid">
+                  Explore my work
+                  <svg class="i i-18 nudge-diag"><use href="#i-arrow-down-right" /></svg>
+                </a>
+                <a href="Shreya_Dawadi_Resume.pdf" download class="btn btn-outline">
+                  Download CV
+                  <svg class="i i-16 nudge-down"><use href="#i-download" /></svg>
+                </a>
+                <span class="hero-social">
+                  <a href="https://github.com/ShreyaDawadi" target="_blank" rel="noreferrer" aria-label="GitHub profile (opens in a new tab)" class="social-btn">
+                    <svg class="i i-em"><use href="#i-github" /></svg>
+                  </a>
+                  <a href="https://www.linkedin.com/in/shreya-dawadi-a80b48270/" target="_blank" rel="noreferrer" aria-label="LinkedIn profile (opens in a new tab)" class="social-btn">
+                    <svg class="i i-em"><use href="#i-linkedin" /></svg>
+                  </a>
+                </span>
+              </div>
+            </div>
+
+            <div class="hero-portrait">
+              <figure>
+                <div class="portrait-frame">
+                  <img src="portrait.jpg" alt="Portrait of Shreya Dawadi" width="1131" height="1508" fetchpriority="high" />
+                  <span class="crop tl" aria-hidden="true"></span>
+                  <span class="crop tr" aria-hidden="true"></span>
+                  <span class="crop bl" aria-hidden="true"></span>
+                  <span class="crop br" aria-hidden="true"></span>
+                </div>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── § 01 About ───────────────────────────────────────────────── -->
+      <section id="about" aria-labelledby="about-title" class="section">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="label eyebrow"><span class="num">§ 01</span><span class="sep">/</span>About</p>
+            <h2 id="about-title" class="display section-title">Web applications, <em>and the networks beneath them.</em></h2>
+          </header>
+
+          <div class="about-grid">
+            <div class="about-body reveal">
+              <p class="lead">I am a Computer Engineering student at the School of Engineering, Pokhara University, where I have been studying since 2023. Most of what I build is full-stack web: React in the browser, Node.js and Express behind it, PostgreSQL underneath, taken all the way from schema to deployment.</p>
+              <div class="prose">
+                <p>In 2026 I spent three months as a Networking Intern at Nepal Telecom, designing, configuring and testing enterprise networks with VLANs, OSPF, DHCP and ACLs. It left me with a habit I now bring to software as well: isolate a fault one layer at a time, and write down what was designed, configured and tested.</p>
+                <p>On the software side my work centres on database design, authentication and API development. Beyond the web, my projects reach into mobile and augmented reality, including PocketLab AR, my final-year project.</p>
+              </div>
+            </div>
+
+            <div class="about-facts reveal" style="--d: 0.1s">
+              <dl class="facts">
+                <div><dt class="label">Studying</dt><dd>BE Computer Engineering, Pokhara University</dd></div>
+                <div><dt class="label">Based in</dt><dd>Parsyang, Pokhara, Nepal</dd></div>
+                <div><dt class="label">Focus</dt><dd>Full-stack web · Networking</dd></div>
+                <div><dt class="label">Final-year project</dt><dd>PocketLab AR</dd></div>
+              </dl>
+            </div>
+
+            <div class="about-style reveal">
+              <h3 class="label sub-label">How I work</h3>
+              <ol class="work-style">
+                <li><span class="label">01</span><span>Structured troubleshooting, isolating faults one layer at a time</span></li>
+                <li><span class="label">02</span><span>Technical documentation of designs, configurations and test results</span></li>
+                <li><span class="label">03</span><span>Collaboration with a project partner on a shared design</span></li>
+                <li><span class="label">04</span><span>Time management across concurrent responsibilities</span></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── § 02 Skills ──────────────────────────────────────────────── -->
+      <!--
+        Superscript numbers = how many projects below use the skill.
+        ◆ = used during the internship. Update them by hand when projects change.
+      -->
+      <section id="skills" aria-labelledby="skills-title" class="section">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="label eyebrow"><span class="num">§ 02</span><span class="sep">/</span>Technical skills</p>
+            <h2 id="skills-title" class="display section-title">The <em>toolkit.</em></h2>
+          </header>
+
+          <div class="offset-col">
+            <dl class="skills">
+              <div class="skill-row reveal">
+                <dt class="label">Languages</dt>
+                <dd>
+                  <ul>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>Dart</li>
+                    <li title="Used in PocketLab AR">C#<sup>1<span class="sr-only">. Used in PocketLab AR</span></sup></li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="skill-row reveal" style="--d: 0.04s">
+                <dt class="label">Frontend</dt>
+                <dd>
+                  <ul>
+                    <li title="Used in Pokhara Local, Café Doux">React<sup>2<span class="sr-only">. Used in Pokhara Local, Café Doux</span></sup></li>
+                    <li>Tailwind CSS</li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="skill-row reveal" style="--d: 0.08s">
+                <dt class="label">Backend</dt>
+                <dd>
+                  <ul>
+                    <li title="Used in Pokhara Local, Café Doux, SmartSpend">Node.js<sup>3<span class="sr-only">. Used in Pokhara Local, Café Doux, SmartSpend</span></sup></li>
+                    <li title="Used in Pokhara Local, Café Doux">Express<sup>2<span class="sr-only">. Used in Pokhara Local, Café Doux</span></sup></li>
+                    <li title="Used in Pokhara Local">JWT authentication<sup>1<span class="sr-only">. Used in Pokhara Local</span></sup></li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="skill-row reveal" style="--d: 0.12s">
+                <dt class="label">Databases</dt>
+                <dd>
+                  <ul>
+                    <li title="Used in Pokhara Local, Café Doux">PostgreSQL<sup>2<span class="sr-only">. Used in Pokhara Local, Café Doux</span></sup></li>
+                    <li>MySQL</li>
+                    <li title="Used in SmartSpend">SQLite<sup>1<span class="sr-only">. Used in SmartSpend</span></sup></li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="skill-row reveal" style="--d: 0.16s">
+                <dt class="label">Networking</dt>
+                <dd>
+                  <ul>
+                    <li title="Used during the Nepal Telecom internship">Cisco Packet Tracer<sup><span aria-hidden="true">◆</span><span class="sr-only">. Used during the Nepal Telecom internship</span></sup></li>
+                    <li title="Used during the Nepal Telecom internship">VLAN<sup><span aria-hidden="true">◆</span><span class="sr-only">. Used during the Nepal Telecom internship</span></sup></li>
+                    <li title="Used during the Nepal Telecom internship">OSPF<sup><span aria-hidden="true">◆</span><span class="sr-only">. Used during the Nepal Telecom internship</span></sup></li>
+                    <li title="Used during the Nepal Telecom internship">DHCP/DNS<sup><span aria-hidden="true">◆</span><span class="sr-only">. Used during the Nepal Telecom internship</span></sup></li>
+                    <li title="Used during the Nepal Telecom internship">ACLs<sup><span aria-hidden="true">◆</span><span class="sr-only">. Used during the Nepal Telecom internship</span></sup></li>
+                    <li>TCP/IP</li>
+                  </ul>
+                </dd>
+              </div>
+              <div class="skill-row reveal" style="--d: 0.2s">
+                <dt class="label">Tools</dt>
+                <dd>
+                  <ul>
+                    <li>Git/GitHub</li>
+                    <li title="Used in PocketLab AR">Unity<sup>1<span class="sr-only">. Used in PocketLab AR</span></sup></li>
+                    <li title="Used in Pokhara Local">Render<sup>1<span class="sr-only">. Used in Pokhara Local</span></sup></li>
+                    <li title="Used in Pokhara Local">Vercel<sup>1<span class="sr-only">. Used in Pokhara Local</span></sup></li>
+                  </ul>
+                </dd>
+              </div>
+            </dl>
+            <p class="label skills-key">
+              <span><span class="accent">1–9</span>&ensp;number of projects below that use it</span>
+              <span><span class="accent">◆</span>&ensp;used during my internship</span>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ── § 03 Work ────────────────────────────────────────────────── -->
+      <!--
+        To add a project: copy one <li class="project"> block, give it a new id,
+        set data-category (a new value automatically gets its own filter button),
+        and update the text. To show a screenshot instead of the drawing, replace
+        the <svg class="plate"> with <img src="projects/name.webp" alt="…">.
+      -->
+      <section id="work" aria-labelledby="work-title" class="section">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="label eyebrow"><span class="num">§ 03</span><span class="sep">/</span>Featured projects</p>
+            <h2 id="work-title" class="display section-title">Selected <em>work.</em></h2>
+          </header>
+
+          <div class="filter-bar reveal">
+            <div role="group" aria-label="Filter projects by category" class="filters" id="filters"></div>
+            <p class="label muted" aria-live="polite" id="filter-count"></p>
+          </div>
+
+          <ul class="projects" id="projects">
+            <!-- PocketLab AR -->
+            <li class="project" data-category="Mobile">
+              <article class="project-inner">
+                <button type="button" class="preview" tabindex="-1" aria-hidden="true" data-toggle>
+                  <div class="preview-zoom">
+                    <svg class="plate" viewBox="0 0 400 290" role="img" aria-label="Diagram illustrating PocketLab AR">
+                      <line x1="30" x2="370" y1="70" y2="70" class="pi" stroke-opacity=".14" />
+                      <line x1="30" x2="370" y1="130" y2="130" class="pi" stroke-opacity=".14" />
+                      <line x1="30" x2="370" y1="190" y2="190" class="pi" stroke-opacity=".14" />
+                      <line y1="30" y2="250" x1="100" x2="100" class="pi" stroke-opacity=".14" />
+                      <line y1="30" y2="250" x1="170" x2="170" class="pi" stroke-opacity=".14" />
+                      <line y1="30" y2="250" x1="240" x2="240" class="pi" stroke-opacity=".14" />
+                      <line y1="30" y2="250" x1="310" x2="310" class="pi" stroke-opacity=".14" />
+                      <line x1="30" y1="250" x2="370" y2="250" class="pi" />
+                      <path d="M50 250 Q175 -70 300 250" class="pi pa" stroke-dasharray="1 6" stroke-linecap="round" style="stroke-width: 2" />
+                      <path d="M50 250 L96 172" class="pi" />
+                      <path d="M96 172 l-9 4 m9 -4 l1 10" class="pi" />
+                      <path d="M82 250 A32 32 0 0 0 66 222" class="pi" />
+                      <circle cx="175" cy="90" r="7" class="fill-accent" />
+                      <path d="M300 250 L370 250 L370 205 Z" class="pi" />
+                      <rect x="338" y="207" width="16" height="12" transform="rotate(-32.7 346 213)" class="pi" />
+                      <text x="90" y="238" class="pm">θ</text>
+                      <text x="104" y="168" class="pm">v₀</text>
+                    </svg>
+                  </div>
+                  <span class="label num-tag">01</span>
+                </button>
+
+                <div class="project-text">
+                  <p class="label muted">Mobile<span class="slash">/</span>Final-year project</p>
+                  <h3 class="display project-title"><button type="button" data-toggle aria-expanded="false" aria-controls="pocketlab-ar-detail">PocketLab AR</button></h3>
+                  <p class="summary">An offline-first mobile AR physics lab with real-time projectile and ramp-motion simulations.</p>
+                  <ul class="tags" aria-label="Technologies"><li>Unity</li><li>C#</li><li>AR Foundation</li><li>ARCore</li></ul>
+                  <div class="project-links">
+                    <button type="button" class="details-btn" data-toggle aria-expanded="false" aria-controls="pocketlab-ar-detail">
+                      <svg class="i i-16 plus"><use href="#i-plus" /></svg><span>Project details</span>
+                    </button>
+                    <a href="https://github.com/ShreyaDawadi" target="_blank" rel="noreferrer" class="link-line inline-link">
+                      <svg class="i i-em"><use href="#i-github" /></svg> GitHub profile <svg class="i i-15"><use href="#i-arrow-up-right" /></svg>
+                    </a>
+                  </div>
+                  <div class="detail" id="pocketlab-ar-detail">
+                    <div class="detail-clip">
+                      <div class="detail-grid">
+                        <div>
+                          <h4 class="label sub-label">What it does</h4>
+                          <ul class="bullets">
+                            <li>Real-time projectile and ramp-motion simulations with adjustable parameters</li>
+                            <li>Offline-first, so the lab works without a connection</li>
+                            <li>Stable above 30 FPS on mid-range Android devices</li>
+                            <li>Built in a team of four</li>
+                          </ul>
+                        </div>
+                        <dl class="detail-facts">
+                          <div><dt class="label">Team</dt><dd>4 people</dd></div>
+                          <div><dt class="label">Performance</dt><dd>30+ FPS, mid-range Android</dd></div>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <!-- Pokhara Local -->
+            <li class="project" data-category="Web">
+              <article class="project-inner">
+                <button type="button" class="preview" tabindex="-1" aria-hidden="true" data-toggle>
+                  <div class="preview-zoom">
+                    <svg class="plate" viewBox="0 0 400 290" role="img" aria-label="Diagram illustrating Pokhara Local">
+                      <path d="M20 210 C90 170 120 240 200 200 S320 150 385 190" class="pi" stroke-opacity=".3" />
+                      <path d="M20 170 C80 120 140 200 210 150 S330 100 385 140" class="pi" stroke-opacity=".3" />
+                      <path d="M20 120 C70 80 150 140 220 100 S340 60 385 90" class="pi" stroke-opacity=".3" />
+                      <path d="M20 255 C100 225 150 275 230 245 S330 215 385 240" class="pi" stroke-opacity=".3" />
+                      <g transform="translate(92 118)">
+                        <path d="M0 0 C-14 -16 -12 -32 0 -32 C12 -32 14 -16 0 0 Z" class="pi" style="fill: var(--paper-deep)" />
+                        <circle cx="0" cy="-21" r="3.5" style="fill: var(--paper-deep)" />
+                      </g>
+                      <g transform="translate(300 92)">
+                        <path d="M0 0 C-14 -16 -12 -32 0 -32 C12 -32 14 -16 0 0 Z" class="pi" style="fill: var(--paper-deep)" />
+                        <circle cx="0" cy="-21" r="3.5" style="fill: var(--paper-deep)" />
+                      </g>
+                      <g transform="translate(205 176)">
+                        <path d="M0 0 C-14 -16 -12 -32 0 -32 C12 -32 14 -16 0 0 Z" class="pi pa" style="fill: var(--accent)" />
+                        <circle cx="0" cy="-21" r="3.5" style="fill: var(--paper-deep)" />
+                      </g>
+                      <g transform="translate(222 150)">
+                        <rect width="140" height="76" class="pi" style="fill: var(--paper)" />
+                        <line x1="14" y1="20" x2="92" y2="20" class="pi" style="stroke-width: 2" />
+                        <line x1="14" y1="36" x2="124" y2="36" class="pi" stroke-opacity=".4" />
+                        <line x1="14" y1="48" x2="104" y2="48" class="pi" stroke-opacity=".4" />
+                        <text x="14" y="66" class="pm" style="fill: var(--accent)">owner · edit</text>
+                      </g>
+                    </svg>
+                  </div>
+                  <span class="label num-tag">02</span>
+                </button>
+
+                <div class="project-text">
+                  <p class="label muted">Web<span class="slash">/</span>Deployed</p>
+                  <h3 class="display project-title"><button type="button" data-toggle aria-expanded="false" aria-controls="pokhara-local-detail">Pokhara Local</button></h3>
+                  <p class="summary">A full-stack business directory with JWT authentication, ownership-based permissions and a normalized PostgreSQL schema.</p>
+                  <ul class="tags" aria-label="Technologies"><li>React</li><li>Node.js</li><li>Express</li><li>PostgreSQL</li><li>JWT authentication</li><li>Vercel</li><li>Render</li></ul>
+                  <div class="project-links">
+                    <button type="button" class="details-btn" data-toggle aria-expanded="false" aria-controls="pokhara-local-detail">
+                      <svg class="i i-16 plus"><use href="#i-plus" /></svg><span>Project details</span>
+                    </button>
+                    <a href="https://github.com/ShreyaDawadi" target="_blank" rel="noreferrer" class="link-line inline-link">
+                      <svg class="i i-em"><use href="#i-github" /></svg> GitHub profile <svg class="i i-15"><use href="#i-arrow-up-right" /></svg>
+                    </a>
+                    <!-- When the live URL is known, add:
+                    <a href="https://…" target="_blank" rel="noreferrer" class="link-line inline-link accent">Live demo <svg class="i i-15"><use href="#i-arrow-up-right" /></svg></a>
+                    -->
+                  </div>
+                  <div class="detail" id="pokhara-local-detail">
+                    <div class="detail-clip">
+                      <div class="detail-grid">
+                        <div>
+                          <h4 class="label sub-label">What it does</h4>
+                          <ul class="bullets">
+                            <li>JWT-based authentication</li>
+                            <li>Ownership-based permissions</li>
+                            <li>Normalized PostgreSQL schema</li>
+                            <li>Deployed live on Vercel and Render</li>
+                          </ul>
+                        </div>
+                        <dl class="detail-facts">
+                          <div><dt class="label">Hosting</dt><dd>Vercel / Render</dd></div>
+                        </dl>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <!-- Café Doux -->
+            <li class="project" data-category="Web">
+              <article class="project-inner">
+                <button type="button" class="preview" tabindex="-1" aria-hidden="true" data-toggle>
+                  <div class="preview-zoom">
+                    <svg class="plate" viewBox="0 0 400 290" role="img" aria-label="Diagram illustrating Café Doux">
+                      <rect x="36" y="46" width="28" height="28" class="pi" />
+                      <text x="44" y="64" class="pm">B1</text>
+                      <path d="M64 60 C120 60 120 140 176 140" class="pi" stroke-opacity=".45" />
+                      <rect x="36" y="126" width="28" height="28" class="pi" />
+                      <text x="44" y="144" class="pm">B2</text>
+                      <path d="M64 140 C120 140 120 140 176 140" class="pi pa" />
+                      <rect x="36" y="206" width="28" height="28" class="pi" />
+                      <text x="44" y="224" class="pm">B3</text>
+                      <path d="M64 220 C120 220 120 140 176 140" class="pi" stroke-opacity=".45" />
+                      <path d="M176 44 H330 V246 l-11 -8 -11 8 -11 -8 -11 8 -11 -8 -11 8 -11 -8 -11 8 -11 -8 -11 8 -11 -8 -11 8 -11 -8 -11 8 Z" class="pi" style="fill: var(--paper)" />
+                      <text x="192" y="70" class="pm">ORDER</text>
+                      <line x1="192" y1="82" x2="314" y2="82" class="pi" stroke-dasharray="2 4" />
+                      <line x1="192" y1="104" x2="258" y2="104" class="pi" stroke-opacity=".5" />
+                      <line x1="292" y1="104" x2="314" y2="104" class="pi" stroke-opacity=".5" />
+                      <line x1="192" y1="126" x2="244" y2="126" class="pi" stroke-opacity=".5" />
+                      <line x1="292" y1="126" x2="314" y2="126" class="pi" stroke-opacity=".5" />
+                      <line x1="192" y1="148" x2="230" y2="148" class="pi" stroke-opacity=".5" />
+                      <line x1="292" y1="148" x2="314" y2="148" class="pi" stroke-opacity=".5" />
+                      <line x1="192" y1="170" x2="314" y2="170" class="pi" stroke-dasharray="2 4" />
+                      <text x="192" y="194" class="pm">TOTAL</text>
+                      <line x1="278" y1="190" x2="314" y2="190" class="pi" style="stroke-width: 2" />
+                      <text x="192" y="218" class="pm" style="fill: var(--accent)">● committed</text>
+                    </svg>
+                  </div>
+                  <span class="label num-tag">03</span>
+                </button>
+
+                <div class="project-text">
+                  <p class="label muted">Web</p>
+                  <h3 class="display project-title"><button type="button" data-toggle aria-expanded="false" aria-controls="cafe-doux-detail">Café Doux</button></h3>
+                  <p class="summary">A multi-branch cafe ordering platform with role-based access, transactional order placement and a branch admin dashboard.</p>
+                  <ul class="tags" aria-label="Technologies"><li>React</li><li>Node.js</li><li>Express</li><li>PostgreSQL</li></ul>
+                  <div class="project-links">
+                    <button type="button" class="details-btn" data-toggle aria-expanded="false" aria-controls="cafe-doux-detail">
+                      <svg class="i i-16 plus"><use href="#i-plus" /></svg><span>Project details</span>
+                    </button>
+                    <a href="https://github.com/ShreyaDawadi" target="_blank" rel="noreferrer" class="link-line inline-link">
+                      <svg class="i i-em"><use href="#i-github" /></svg> GitHub profile <svg class="i i-15"><use href="#i-arrow-up-right" /></svg>
+                    </a>
+                  </div>
+                  <div class="detail" id="cafe-doux-detail">
+                    <div class="detail-clip">
+                      <div class="detail-grid">
+                        <div>
+                          <h4 class="label sub-label">What it does</h4>
+                          <ul class="bullets">
+                            <li>Multi-branch ordering</li>
+                            <li>Role-based access</li>
+                            <li>Transactional order placement</li>
+                            <li>Branch admin dashboard</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <!-- SmartSpend -->
+            <li class="project" data-category="Mobile">
+              <article class="project-inner">
+                <button type="button" class="preview" tabindex="-1" aria-hidden="true" data-toggle>
+                  <div class="preview-zoom">
+                    <svg class="plate" viewBox="0 0 400 290" role="img" aria-label="Diagram illustrating SmartSpend">
+                      <path d="M46 34 H170 V252 l-10 -7 -10 7 -10 -7 -10 7 -10 -7 -10 7 -10 -7 -10 7 -10 -7 -10 7 -10 -7 -14 7 Z" class="pi" style="fill: var(--paper)" />
+                      <line x1="62" y1="62" x2="154" y2="62" class="pi" style="stroke-width: 2" />
+                      <line x1="62" y1="84" x2="132" y2="84" class="pi" stroke-opacity=".4" />
+                      <line x1="62" y1="106" x2="154" y2="106" class="pi" stroke-opacity=".4" />
+                      <line x1="62" y1="128" x2="132" y2="128" class="pi" stroke-opacity=".4" />
+                      <line x1="62" y1="150" x2="154" y2="150" class="pi" stroke-opacity=".4" />
+                      <line x1="62" y1="172" x2="132" y2="172" class="pi" stroke-opacity=".4" />
+                      <line x1="62" y1="206" x2="154" y2="206" class="pi" style="stroke-width: 2" />
+                      <path d="M34 50 V24 H60 M156 24 H182 V50 M182 236 V262 H156 M60 262 H34 V236" class="pi pa" />
+                      <line x1="28" y1="128" x2="188" y2="128" class="pi pa" style="stroke-width: 2" />
+                      <path d="M202 140 H236 m-8 -7 l8 7 -8 7" class="pi" />
+                      <g transform="translate(252 78)">
+                        <text x="0" y="0" class="pm">{</text>
+                        <text x="12" y="22" class="pm">merchant</text>
+                        <text x="12" y="44" class="pm">date</text>
+                        <text x="12" y="66" class="pm">items [ ]</text>
+                        <text x="12" y="88" class="pm" style="fill: var(--accent)">total</text>
+                        <text x="0" y="110" class="pm">}</text>
+                        <line x1="76" y1="18" x2="104" y2="18" class="pi" stroke-opacity=".4" />
+                        <line x1="76" y1="40" x2="98" y2="40" class="pi" stroke-opacity=".4" />
+                        <line x1="76" y1="62" x2="92" y2="62" class="pi" stroke-opacity=".4" />
+                        <line x1="76" y1="84" x2="112" y2="84" class="pi pa" />
+                      </g>
+                    </svg>
+                  </div>
+                  <span class="label num-tag">04</span>
+                </button>
+
+                <div class="project-text">
+                  <p class="label muted">Mobile</p>
+                  <h3 class="display project-title"><button type="button" data-toggle aria-expanded="false" aria-controls="smartspend-detail">SmartSpend</button></h3>
+                  <p class="summary">A cross-platform expense tracker with on-device OCR receipt scanning and Gemini-powered structured data extraction.</p>
+                  <ul class="tags" aria-label="Technologies"><li>Flutter</li><li>Node.js</li><li>SQLite</li><li>Gemini API</li></ul>
+                  <div class="project-links">
+                    <button type="button" class="details-btn" data-toggle aria-expanded="false" aria-controls="smartspend-detail">
+                      <svg class="i i-16 plus"><use href="#i-plus" /></svg><span>Project details</span>
+                    </button>
+                    <a href="https://github.com/ShreyaDawadi" target="_blank" rel="noreferrer" class="link-line inline-link">
+                      <svg class="i i-em"><use href="#i-github" /></svg> GitHub profile <svg class="i i-15"><use href="#i-arrow-up-right" /></svg>
+                    </a>
+                  </div>
+                  <div class="detail" id="smartspend-detail">
+                    <div class="detail-clip">
+                      <div class="detail-grid">
+                        <div>
+                          <h4 class="label sub-label">What it does</h4>
+                          <ul class="bullets">
+                            <li>Cross-platform app built with Flutter</li>
+                            <li>On-device OCR receipt scanning</li>
+                            <li>Gemini-powered extraction of structured data from receipts</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+
+            <!-- Arduino-Based Weather Station -->
+            <li class="project" data-category="Hardware">
+              <article class="project-inner">
+                <button type="button" class="preview" tabindex="-1" aria-hidden="true" data-toggle>
+                  <div class="preview-zoom">
+                    <svg class="plate" viewBox="0 0 400 290" role="img" aria-label="Diagram illustrating Arduino-Based Weather Station">
+                      <path d="M50 30 V245 H372" class="pi" />
+                      <line x1="50" x2="372" y1="80" y2="80" class="pi" stroke-opacity=".14" />
+                      <line x1="50" x2="372" y1="130" y2="130" class="pi" stroke-opacity=".14" />
+                      <line x1="50" x2="372" y1="180" y2="180" class="pi" stroke-opacity=".14" />
+                      <line x1="114" x2="114" y1="245" y2="250" class="pi" />
+                      <line x1="178" x2="178" y1="245" y2="250" class="pi" />
+                      <line x1="242" x2="242" y1="245" y2="250" class="pi" />
+                      <line x1="306" x2="306" y1="245" y2="250" class="pi" />
+                      <path d="M50 190 C90 180 100 120 146 112 S210 150 242 132 S310 66 372 78" class="pi pa" style="stroke-width: 2" />
+                      <path d="M50 110 C92 116 104 170 150 176 S214 138 246 158 S318 212 372 198" class="pi" stroke-dasharray="5 4" />
+                      <circle cx="146" cy="112" r="3.5" class="pi pa" style="fill: var(--paper-deep)" />
+                      <circle cx="242" cy="132" r="3.5" class="pi pa" style="fill: var(--paper-deep)" />
+                      <circle cx="372" cy="78" r="3.5" class="pi pa" style="fill: var(--paper-deep)" />
+                      <text x="318" y="62" class="pm" style="fill: var(--accent)">temp °C</text>
+                      <text x="300" y="226" class="pm">humidity %</text>
+                      <text x="50" y="268" class="pm">DHT22 · sampled readings</text>
+                    </svg>
+                  </div>
+                  <span class="label num-tag">05</span>
+                </button>
+
+                <div class="project-text">
+                  <p class="label muted">Hardware<span class="slash">/</span>Simulation</p>
+                  <h3 class="display project-title"><button type="button" data-toggle aria-expanded="false" aria-controls="arduino-weather-station-detail">Arduino-Based Weather Station</button></h3>
+                  <p class="summary">A simulated weather station collecting temperature and humidity data.</p>
+                  <ul class="tags" aria-label="Technologies"><li>Arduino</li><li>DHT22</li></ul>
+                  <div class="project-links">
+                    <button type="button" class="details-btn" data-toggle aria-expanded="false" aria-controls="arduino-weather-station-detail">
+                      <svg class="i i-16 plus"><use href="#i-plus" /></svg><span>Project details</span>
+                    </button>
+                    <a href="https://github.com/ShreyaDawadi" target="_blank" rel="noreferrer" class="link-line inline-link">
+                      <svg class="i i-em"><use href="#i-github" /></svg> GitHub profile <svg class="i i-15"><use href="#i-arrow-up-right" /></svg>
+                    </a>
+                  </div>
+                  <div class="detail" id="arduino-weather-station-detail">
+                    <div class="detail-clip">
+                      <div class="detail-grid">
+                        <div>
+                          <h4 class="label sub-label">What it does</h4>
+                          <ul class="bullets">
+                            <li>Collects temperature and humidity readings</li>
+                            <li>Built around a DHT22 sensor</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </li>
+          </ul>
+
+          <p class="more muted">
+            More on
+            <a href="https://github.com/ShreyaDawadi" target="_blank" rel="noreferrer" class="link-line inline-link ink">github.com/ShreyaDawadi <svg class="i i-15"><use href="#i-arrow-up-right" /></svg></a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ── § 04 Education ───────────────────────────────────────────── -->
+      <section id="education" aria-labelledby="education-title" class="section">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="label eyebrow"><span class="num">§ 04</span><span class="sep">/</span>Education</p>
+            <h2 id="education-title" class="display section-title">Where I <em>studied.</em></h2>
+          </header>
+
+          <ol class="timeline offset-col">
+            <li class="entry reveal">
+              <span class="dot" aria-hidden="true"></span>
+              <p class="label period">2023 – Present</p>
+              <div class="entry-body">
+                <h3 class="display entry-title">Bachelor of Engineering <em>Computer Engineering</em></h3>
+                <p class="entry-org">School of Engineering, Pokhara University</p>
+                <p class="label muted entry-loc">Pokhara, Nepal</p>
+              </div>
+            </li>
+            <li class="entry reveal" style="--d: 0.05s">
+              <span class="dot" aria-hidden="true"></span>
+              <p class="label period">&nbsp;</p>
+              <div class="entry-body">
+                <h3 class="display entry-title">+2 / Higher Secondary Education</h3>
+                <p class="entry-org">Motherland Higher Secondary School</p>
+                <p class="label muted entry-loc">Pokhara, Nepal</p>
+              </div>
+            </li>
+            <li class="entry reveal" style="--d: 0.1s">
+              <span class="dot" aria-hidden="true"></span>
+              <p class="label period">&nbsp;</p>
+              <div class="entry-body">
+                <h3 class="display entry-title">Primary Education</h3>
+                <p class="entry-org">Nilgiri English Boarding School</p>
+                <p class="label muted entry-loc">Pokhara, Nepal</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ── § 05 Experience ──────────────────────────────────────────── -->
+      <section id="experience" aria-labelledby="experience-title" class="section">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="label eyebrow"><span class="num">§ 05</span><span class="sep">/</span>Experience</p>
+            <h2 id="experience-title" class="display section-title">In the <em>field.</em></h2>
+          </header>
+
+          <ol class="timeline offset-col">
+            <li class="entry reveal">
+              <span class="dot" aria-hidden="true"></span>
+              <p class="label period">May 2026 – Aug 2026</p>
+              <div class="entry-body">
+                <h3 class="display entry-title">Networking Intern</h3>
+                <p class="entry-org">Nepal Doorsanchar Company Limited (Nepal Telecom), Ranipauwa</p>
+                <p class="label muted entry-loc">Pokhara, Nepal</p>
+                <ul class="bullets responsibilities">
+                  <li>Designed, configured and tested three enterprise networks in Cisco Packet Tracer using VLANs, OSPF, DHCP/DNS and ACLs.</li>
+                  <li>Assisted the Customer Care department through Nepal Telecom's CRM and CPG systems.</li>
+                </ul>
+                <ul class="tags" aria-label="Technologies used"><li>Cisco Packet Tracer</li><li>VLAN</li><li>OSPF</li><li>DHCP/DNS</li><li>ACLs</li></ul>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ── § 06 Contact ─────────────────────────────────────────────── -->
+      <section id="contact" aria-labelledby="contact-title" class="section">
+        <div class="wrap">
+          <header class="section-head reveal">
+            <p class="label eyebrow"><span class="num">§ 06</span><span class="sep">/</span>Contact</p>
+            <h2 id="contact-title" class="display section-title"><em>Let’s talk.</em></h2>
+          </header>
+
+          <div class="contact-grid">
+            <div class="contact-info reveal">
+              <p class="closing">Whether you are hiring, looking for a collaborator, or want to talk through one of these projects, email is the quickest way to reach me.</p>
+
+              <dl class="facts contact-list">
+                <div>
+                  <dt class="label">Email</dt>
+                  <dd class="email-row">
+                    <a href="mailto:dawadishreya1@gmail.com" class="link-line email-link">dawadishreya1@gmail.com</a>
+                    <button type="button" class="icon-btn copy-btn" id="copy-email" aria-label="Copy email address" title="Copy email address">
+                      <svg class="i i-16 when-idle"><use href="#i-copy" /></svg>
+                      <svg class="i i-16 when-copied"><use href="#i-check" /></svg>
+                    </button>
+                  </dd>
+                </div>
+                <div>
+                  <dt class="label">GitHub</dt>
+                  <dd>
+                    <a href="https://github.com/ShreyaDawadi" target="_blank" rel="noreferrer" class="link-line inline-link">
+                      <svg class="i i-em"><use href="#i-github" /></svg>github.com/ShreyaDawadi<svg class="i i-15"><use href="#i-arrow-up-right" /></svg>
+                    </a>
+                  </dd>
+                </div>
+                <div>
+                  <dt class="label">LinkedIn</dt>
+                  <dd>
+                    <a href="https://www.linkedin.com/in/shreya-dawadi-a80b48270/" target="_blank" rel="noreferrer" class="link-line inline-link">
+                      <svg class="i i-em"><use href="#i-linkedin" /></svg>linkedin.com/in/shreya-dawadi-a80b48270<svg class="i i-15"><use href="#i-arrow-up-right" /></svg>
+                    </a>
+                  </dd>
+                </div>
+                <div>
+                  <dt class="label">Based in</dt>
+                  <dd>Pokhara, Nepal</dd>
+                </div>
+              </dl>
+            </div>
+
+            <div class="contact-form reveal" style="--d: 0.1s">
+              <h3 class="label sub-label form-heading">Or write to me here</h3>
+              <form id="contact-form" novalidate>
+                <div class="form-row">
+                  <div class="field">
+                    <label for="contact-name" class="label">Your name</label>
+                    <input id="contact-name" name="name" type="text" autocomplete="name" required />
+                    <p class="field-error" id="contact-name-error" hidden></p>
+                  </div>
+                  <div class="field">
+                    <label for="contact-email" class="label">Your email</label>
+                    <input id="contact-email" name="email" type="email" autocomplete="email" inputmode="email" required />
+                    <p class="field-error" id="contact-email-error" hidden></p>
+                  </div>
+                </div>
+                <div class="field">
+                  <label for="contact-message" class="label">Message</label>
+                  <textarea id="contact-message" name="message" rows="4" required></textarea>
+                  <p class="field-error" id="contact-message-error" hidden></p>
+                </div>
+                <!-- honeypot: real people leave it empty -->
+                <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="honeypot" />
+
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-solid" id="contact-submit">
+                    <span id="submit-text">Continue in your email app</span>
+                    <svg class="i i-15 nudge-right"><use href="#i-send" /></svg>
+                  </button>
+                  <p role="status" class="form-status" id="form-status">Opens a ready-to-send email addressed to me.</p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap label footer-inner">
+        <p>© <span id="year">2026</span> Shreya Dawadi</p>
+        <a href="#top" class="link-line inline-link ink">Back to top <svg class="i i-14"><use href="#i-arrow-up" /></svg></a>
+      </div>
+    </footer>
+
+    <a href="#top" class="to-top" id="to-top" aria-label="Back to top" title="Back to top">
+      <svg class="i i-18"><use href="#i-arrow-up" /></svg>
+    </a>
+  </body>
+</html>
